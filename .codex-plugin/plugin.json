@@ -1,0 +1,32 @@
+{
+  "name": "carmy",
+  "version": "0.1.0",
+  "description": "Strict, reuse-first coding workflow with cold/hot explanation modes: task branch, task-only diff, TDD, verify twice, atomic commits, top-contributor PRs.",
+  "author": {
+    "name": "Rishit Sharma",
+    "url": "https://github.com/Rish-it"
+  },
+  "homepage": "https://github.com/Rish-it/carmy",
+  "repository": "https://github.com/Rish-it/carmy",
+  "license": "MIT",
+  "keywords": ["yagni", "reuse-first", "workflow", "code-review", "productivity"],
+  "skills": "./skills/",
+  "hooks": "./hooks/claude-codex-hooks.json",
+  "interface": {
+    "displayName": "Carmy",
+    "shortDescription": "Reuse-first coding workflow",
+    "longDescription": "Understand the flow, fix the root cause, reuse before adding, and ship the shortest maintainable diff behind strict verification and commit gates. Cold mode is minimal and technical; hot mode explains the bug to a beginner, then ships the same tight fix.",
+    "developerName": "Rishit Sharma",
+    "category": "Productivity",
+    "websiteURL": "https://github.com/Rish-it/carmy",
+    "capabilities": ["Instructions", "Lifecycle hooks"],
+    "defaultPrompt": [
+      "Use Carmy for this task.",
+      "Carmy hot: explain this bug for a beginner, then fix it.",
+      "Carmy cold: the smallest correct fix, no explanation."
+    ],
+    "brandColor": "#7a1f1f",
+    "composerIcon": "./assets/koala-icon.png",
+    "logo": "./assets/koala-icon.png"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "carmy",
+  "version": "0.1.0",
+  "description": "Strict, reuse-first coding workflow with cold/hot explanation modes: task branch, task-only diff, TDD, verify twice, atomic commits, top-contributor PRs.",
+  "author": {
+    "name": "Rishit Sharma",
+    "url": "https://github.com/Rish-it"
+  },
+  "homepage": "https://github.com/Rish-it/carmy",
+  "repository": "https://github.com/Rish-it/carmy",
+  "hooks": "./hooks/claude-codex-hooks.json"
+}

@@ -1,0 +1,37 @@
+name: publish
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+      # Trusted publishing (OIDC) needs npm >= 11.5.1; Node 22 ships npm 10.
+      - run: npm install -g npm@latest
+      - name: Check version consistency
+        run: node scripts/version.js --check
+      - name: Check instruction invariants
+        run: node scripts/check-invariants.js
+      - name: Check lineage
+        run: node scripts/check-lineage.js --history
+      - name: Run tests
+        run: npm test
+      - name: Inspect package payload
+        run: npm pack --dry-run
+      # No token: id-token: write lets npm authenticate via OIDC, and provenance
+      # is attached automatically. access set in publishConfig.
+      - run: npm publish

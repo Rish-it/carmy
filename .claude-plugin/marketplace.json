@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "carmy",
+  "description": "Strict, reuse-first coding workflow for AI agents. The shortest maintainable diff that fully solves the verified problem.",
+  "owner": {
+    "name": "Rishit Sharma",
+    "url": "https://github.com/Rish-it"
+  },
+  "plugins": [
+    {
+      "name": "carmy",
+      "description": "Reuse before you add. Task branch, task-only diff, TDD, verify twice, atomic commits, top-contributor PRs. Cold and hot modes.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

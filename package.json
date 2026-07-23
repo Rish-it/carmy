@@ -1,0 +1,49 @@
+{
+  "name": "carmy",
+  "version": "0.1.0",
+  "description": "Strict, reuse-first coding workflow with cold/hot explanation modes for Claude Code and Codex.",
+  "keywords": ["skills", "workflow", "reuse-first", "yagni", "code-review", "claude-code", "codex"],
+  "license": "MIT",
+  "author": {
+    "name": "Rishit Sharma"
+  },
+  "homepage": "https://github.com/Rish-it/carmy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rish-it/carmy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rish-it/carmy/issues"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "files": [
+    "AGENTS.md",
+    "skills/",
+    "hooks/",
+    "commands/",
+    "scripts/uninstall.js",
+    "scripts/version.js",
+    "scripts/check-invariants.js",
+    "scripts/check-lineage.js",
+    ".claude-plugin/",
+    ".codex-plugin/",
+    "after-install.md",
+    "assets/",
+    "docs/",
+    "examples/",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check-invariants": "node scripts/check-invariants.js",
+    "check-lineage": "node scripts/check-lineage.js",
+    "check-versions": "node scripts/version.js --check",
+    "bump-version": "node scripts/version.js",
+    "prepublishOnly": "npm run check-versions && npm run check-invariants && npm run check-lineage && npm test"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

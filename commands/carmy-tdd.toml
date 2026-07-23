@@ -1,0 +1,2 @@
+description = "Run Carmy's self-contained RED-GREEN TDD protocol"
+prompt = "Apply the carmy-tdd skill to: {{args}}. Reuse the repository's existing test harness, fixtures, and helpers. First prove one public behavior RED. Then make the smallest shared-root-cause fix GREEN using Carmy's reuse-first ladder. Do not add a test framework or mock internals. Run relevant verification twice in separate clean runs; report RED, GREEN, and both commands."
