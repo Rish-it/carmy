@@ -1,0 +1,23 @@
+tests/package.test.js
+  s_820e31606e68a0::t_e892f6ebad5812 43,48,50-53
+README.md
+  s_820e31606e68a0::t_c040feffb1042f 2
+.codex-plugin/plugin.json
+  s_820e31606e68a0::t_be81a22a05a682 29-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "e92287445f827edcda238b355faa05662b1da22f",
+  "prompts": {},
+  "sessions": {
+    "s_820e31606e68a0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fadd2e01-5c95-4142-abe7-53d9235c8623",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Rishit Sharma <rishitsharmar89@gmail.com>"
+    }
+  }
+}
