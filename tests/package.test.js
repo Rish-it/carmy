@@ -40,17 +40,17 @@ test('npm pack contains every runnable package script', () => {
   });
   assert.equal(packed.status, 0, packed.stderr);
   const paths = new Set(JSON.parse(packed.stdout)[0].files.map((file) => file.path));
-  for (const file of ['scripts/uninstall.js', 'scripts/version.js', 'scripts/check-invariants.js', 'scripts/check-lineage.js', 'docs/platform-native.md', 'examples/README.md', 'assets/koala-icon.png', '.claude-plugin/plugin.json', '.codex-plugin/plugin.json']) {
+  for (const file of ['scripts/uninstall.js', 'scripts/version.js', 'scripts/check-invariants.js', 'scripts/check-lineage.js', 'docs/platform-native.md', 'examples/README.md', 'assets/kong-icon.png', '.claude-plugin/plugin.json', '.codex-plugin/plugin.json']) {
     assert.ok(paths.has(file), `packed tarball omits ${file}`);
   }
 });
 
-test('plugin manifests use the bundled koala icon', () => {
+test('plugin manifests use the bundled kong icon', () => {
   const codex = JSON.parse(fs.readFileSync(path.join(root, '.codex-plugin', 'plugin.json'), 'utf8'));
-  const icon = path.join(root, 'assets', 'koala-icon.png');
-  assert.ok(fs.existsSync(icon), 'assets/koala-icon.png is missing');
-  assert.equal(codex.interface.composerIcon, './assets/koala-icon.png');
-  assert.equal(codex.interface.logo, './assets/koala-icon.png');
+  const icon = path.join(root, 'assets', 'kong-icon.png');
+  assert.ok(fs.existsSync(icon), 'assets/kong-icon.png is missing');
+  assert.equal(codex.interface.composerIcon, './assets/kong-icon.png');
+  assert.equal(codex.interface.logo, './assets/kong-icon.png');
 });
 
 test('plugin manifests and package.json share one version', () => {
