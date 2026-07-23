@@ -9,7 +9,6 @@
 </p>
 
 <p align="center">
-  <a href="https://skills.sh/Rish-it/carmy"><img src="https://skills.sh/b/Rish-it/carmy" alt="skills.sh"></a>
   <img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license">
   <img src="https://img.shields.io/badge/hosts-Claude%20Code%20%2B%20Codex-111111?style=flat-square" alt="Claude Code and Codex">
 </p>

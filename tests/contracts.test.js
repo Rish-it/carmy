@@ -53,7 +53,6 @@ test('README gives skills.sh users a direct installation path', () => {
   const readme = read('README.md');
   assert.match(readme, /skills\.sh/i);
   assert.match(readme, /npx skills add https:\/\/github\.com\/Rish-it\/carmy --skill carmy/i);
-  assert.match(readme, /skills\.sh\/b\/Rish-it\/carmy/i);
 });
 
 test('release job verifies the exact artifact before publishing', () => {
