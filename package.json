@@ -1,5 +1,5 @@
 {
-  "name": "carmy",
+  "name": "@rishitxathrean/carmy",
   "version": "0.1.0",
   "description": "Strict, reuse-first coding workflow with cold/hot explanation modes for Claude Code and Codex.",
   "keywords": ["skills", "workflow", "reuse-first", "yagni", "code-review", "claude-code", "codex"],

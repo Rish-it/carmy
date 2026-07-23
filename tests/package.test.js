@@ -11,6 +11,11 @@ const { spawnSync } = require('child_process');
 const root = path.join(__dirname, '..');
 const pkg = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
 
+test('npm package uses the public release scope', () => {
+  assert.equal(pkg.name, '@rishitxathrean/carmy');
+  assert.equal(pkg.publishConfig.access, 'public');
+});
+
 test('npm package ships the advertised cleanup script', () => {
   assert.ok(pkg.files.includes('scripts/uninstall.js'), 'package.json "files" must include scripts/uninstall.js');
   assert.ok(fs.existsSync(path.join(root, 'scripts', 'uninstall.js')), 'scripts/uninstall.js is listed but missing on disk');
